@@ -1,5 +1,6 @@
 import React from "react";
-import { YStack, Button, Text } from "tamagui";
+import { Button as RNButton } from "react-native";
+import { YStack, Button, Text, Separator } from "tamagui";
 
 export default function index() {
   const [s, ss] = React.useState(0);
@@ -12,6 +13,9 @@ export default function index() {
       </Text>
       <Button onPress={c}>Increase</Button>
       <Button onPress={al}>Alert!</Button>
+      <Separator />
+      <RNButton onPress={c} title="Increase" />
+      <RNButton onPress={al} title="Alert!" />
     </YStack>
   );
 }

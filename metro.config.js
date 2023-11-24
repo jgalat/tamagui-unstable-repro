@@ -1,6 +1,6 @@
 const { getDefaultConfig } = require("expo/metro-config");
 
-const defaultConfig = getDefaultConfig(__dirname);
+const defaultConfig = getDefaultConfig(__dirname, { isCSSEnabled: true });
 
 module.exports = {
   ...defaultConfig,
@@ -8,6 +8,5 @@ module.exports = {
     ...defaultConfig.resolver,
     sourceExts: [...(defaultConfig.resolver?.sourceExts ?? []), "mjs"],
     unstable_enablePackageExports: true,
-    unstable_conditionNames: ["react-native", "browser", "require"],
   },
 };

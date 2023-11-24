@@ -7,6 +7,10 @@ import { TamaguiProvider } from "tamagui";
 
 import config from "../tamagui.config";
 
+export { ErrorBoundary } from "expo-router";
+
+export const unstable_settings = { initialRouteName: "/" };
+
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
